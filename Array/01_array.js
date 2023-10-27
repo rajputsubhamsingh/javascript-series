@@ -42,7 +42,7 @@ const arr2 = ['rema', 'shipu', 'deepu']
 
 console.log(Array.isArray('shubham'));
 console.log(Array.from('shubham'));
-console.log(Array.from({name: 'shubham'}));
+console.log(Array.from({name: 'shubham'}));          
 
 let score1 = 100;
 let score2 = 200;
