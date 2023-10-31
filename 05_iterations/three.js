@@ -6,15 +6,15 @@
 const arr = [1, 2, 3, 4, 5]
 
 for (const num of arr) {
-    //console.log(num);
+    // console.log(num);
 }
 
 const greetings = "Hello world!"
 for (const greet of greetings) {
-    //console.log(`Each char is ${greet}`)
+    // console.log(`Each char is ${greet}`)
 }
 
-// Maps
+// Maps - only get unique value (duplicate not allowed)
 
 const map = new Map()
 map.set('IN', "India")
@@ -33,8 +33,8 @@ const myObject = {
     game1: 'NFS',
     game2: 'Spiderman'
 }
+// not worked
 
 // for (const [key, value] of myObject) {
-//     console.log(key, ':-', value);
-    
+//     console.log(key, ':-', value); 
 // }

@@ -1,28 +1,35 @@
-// const coding = ["js", "ruby", "java", "python", "cpp"]
+const coding = ["js", "ruby", "java", "python", "cpp"]
 
+//foreach no return here
 
 // const values = coding.forEach( (item) => {
-//     //console.log(item);
+//     console.log(item);
 //     return item
 // } )
 
 // console.log(values);
 
-const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+// const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // const newNums = myNums.filter( (num) => {
 //     return num > 4
 // } )
-
-// const newNums = []
-
-// myNums.forEach( (num) => {
-//     if (num > 4) {
-//         newNums.push(num)
-//     }
-// } )
-
 // console.log(newNums);
+
+
+
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const newNums = []
+
+myNums.forEach( (num) => {
+    if (num > 4) {
+      newNums.push(num)
+    }
+} )
+// console.log(newNums);
+
 
 
 const books = [
@@ -37,9 +44,9 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ];
 
-  let userBooks = books.filter( (bk) => bk.genre === 'History')
-
-  userBooks = books.filter( (bk) => { 
+  // let userBooks = books.filter( (bk) => bk.genre === 'History')
+ 
+  let userBooks = books.filter( (bk) => { 
     return bk.publish >= 1995 && bk.genre === "History"
-})
+  });
   console.log(userBooks);
