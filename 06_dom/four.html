@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code aur sath sath hm bhi.</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(languageName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${languageName}`
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addLanguage('python')
+    addLanguage('ruby')
+    addLanguage('typescript hu main')
+
+    function addOptimizeLangauge(languageName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(languageName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptimizeLangauge('Java')
+
+    //edit (remove and change in li tag)
+
+    // const secondLang = document.querySelector('li:nth-child(2)')
+    // // secondLang.innerHTML = 'MOJO'  // not optimize technique
+    // const newLi = document.createElement('li')
+    // newLi.textContent = 'MOJO'
+    // secondLang.replaceWith(newLi)
+
+    const secondLang = document.querySelector('li:nth-child(2)')
+            // yaha hm second li ke jagah p tag laga rhe hai 
+    const p = document.createElement('p')
+    p.textContent = 'yaha hm second li ke jagah p tag laga rhe hai'
+    secondLang.replaceWith(p)
+    
+    // edit 
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>typescript</li>'
+
+    // remove  
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>
