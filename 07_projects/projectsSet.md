@@ -84,9 +84,9 @@ const clock = document.getElementById('clock')
 
 ```
 
-```Digital Clock Code which is project 3 solution
+## Digital Clock Code which is project 3 solution
 
-
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
