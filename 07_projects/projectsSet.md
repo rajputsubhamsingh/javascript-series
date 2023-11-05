@@ -70,5 +70,65 @@ const form = document.querySelector('form')
             }
         }
     })
+```
 
+## project 3 solution code
+
+``` javascript
+const clock = document.getElementById('clock')  
+
+  setInterval(() => {
+  let date = new Date()
+  clock.innerHTML = date.toLocaleTimeString()
+  }, 1000);
+
+```
+
+```Digital Clock Code which is project 3 solution
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Local Time</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: #fff;
+        }
+
+        .center {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #clock {
+            font-size: 40px;
+            background-color: orange;
+            padding: 25px 60px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body> 
+    <div class="center">
+        <div id="banner"><h1>Your Local Time</h1></div>
+        <div id="clock"></div>
+    </div> 
+    <script>
+        const clock = document.getElementById('clock')  
+
+        setInterval(() => {
+            let date = new Date()
+            clock.innerHTML = date.toLocaleTimeString()
+        }, 1000);
+    </script>
+</body>
+</html>
 ```
