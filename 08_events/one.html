@@ -63,23 +63,41 @@
     //     console.log("google clicked");
     // }, false)
 
+
+
+    
+        document.getElementById('owl').addEventListener('click', function (e) {
+            console.log("owl clicked - 1");
+            // e.stopPropagation()
+            e.stopImmediatePropagation()
+        }, false)
+
+        
+        document.getElementById('owl').addEventListener('click', function (e) {
+            console.log("owl clicked - 2");
+            // e.stopPropagation()
+            e.stopImmediatePropagation()
+        }, false)
+
+    // remove the image
+
     document.getElementById('images').addEventListener('click', function (e) {
-        // console.log(e.target.parentNode);
+        // // console.log(e.target.parentNode);
+        // // console.log(e.target.tagName);
+        // // let removeIt = e.target.parentNode
+
+        // // 1way
+        // // removeIt.remove()
+
+        // // 2way
+        // // removeIt.parentNode.removeChild(removeIt)
+
         // console.log(e.target.tagName);
-        // let removeIt = e.target.parentNode
-
-        // 1way
-        // removeIt.remove()
-
-        // 2way
-        // removeIt.parentNode.removeChild(removeIt)
-
-        console.log(e.target.tagName);
-        if(e.target.tagName === 'IMG'){
-            console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove()
-        }  
+        // if(e.target.tagName === 'IMG'){
+        //     console.log(e.target.id);
+        //     let removeIt = e.target.parentNode
+        //     removeIt.remove()
+        // }  
     })
 </script>
 </html>
