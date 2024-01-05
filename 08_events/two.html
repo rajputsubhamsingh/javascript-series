@@ -17,14 +17,29 @@
     //     console.log('Shubham Singh!!!!!')
     // }, 2000);
 
-    const sayShubham = function() {
-        console.log('Welcome Bihar!!!..');
-    }
-    const sayShubhamAgain = function () {
-        console.log('lorem 100..');
+
+
+    // const sayShubham = function() {
+    //     console.log('Welcome Bihar!!!..');
+    // }
+    // const sayShubhamAgain = function () {
+    //     console.log('lorem 100..');
+    // }
+
+    // setTimeout(sayShubham, 2000);
+    // setInterval(sayShubhamAgain, 2000);
+
+        
+    const changeText = function() {
+        document.querySelector('h1').innerHTML = 'Best Js Series'
     }
 
-    setTimeout(sayShubham, 2000);
-    setInterval(sayShubhamAgain, 2000);
+    const changeStop = setTimeout(changeText, 5000);
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeStop)
+        console.log('STOPPED!!!...')
+    })
+
 </script>
 </html>
