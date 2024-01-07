@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApiRequest</title>
+</head>
+<body>
+    <!-- This old method of fetching api here we dont use fetch() api method. -->
+    <h1>xmlhttpRequest</h1>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/rajputsubhamsingh'
+    const xhttp = new XMLHttpRequest()
+    xhttp.open('GET', requestUrl)
+    xhttp.onreadystatechange = function(){
+        console.log(xhttp.readyState);
+        if(xhttp.readyState === 4){
+            // const data = this.responseText
+            // console.log(typeof data)
+
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+            console.log("Follower : " + data.followers);
+            console.log("Following : " + data.following);
+            console.log("public_repos : " + data.public_repos);
+            console.log(data.avatar_url); 
+            console.log(data.url); 
+        }
+    }
+    // console.log(xhttp.readyState)
+    xhttp.send()
+</script>
+</html>
