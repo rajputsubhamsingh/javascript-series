@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button clicked</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:3000"
+            this.server2 = "https://localhost:8 000"
+
+            // requirement 
+            document.querySelector('button').addEventListener('click', this.handleClick.bind(this))
+
+        }
+        handleClick(){
+            console.log('button clicked');
+            // undefined aa rha hai to usko hata ke value lene ke liye bind keyword ka use karna padega
+            // ab problem ye hai ki bind kaha use kare karenge 
+            // to bind ko hm constructor ke ander jake jo addEventListener hai waha pe jake 
+            // .bind() function ko call karenge aur usme "this" keyword ko pass karenge
+            // document.querySelector('button').addEventListener('click', this.handleClick.bind(this))
+            console.log(this);
+            console.log(this.server);
+            console.log(this.server2);
+            console.log(this.library);
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
