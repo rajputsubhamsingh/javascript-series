@@ -7,14 +7,26 @@
 </head>
 <body>
     <script>
+        let a = {
+            name: 'shyam-ram',
+            language: 'Hindi-Sanskrit',
+            // run: () => {
+            //     alert('self run')
+            // }
+        }
+
         let p = {
             run: () => {
                 alert('run')
             }
         }
+
+        p.__proto__ = {
+            name2: 'sohan'
+        }
         
         a.__proto__ = p
-        console.log(a.run);
+        console.log(a.name);
     </script>
 </body>
 </html>
