@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Parse</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        // const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+        // const obj = JSON.parse(text)
+        // // console.log(obj);
+        // // document.querySelector('#demo').innerHTML = obj.name
+
+        // obj.birth = new Date(obj.birth)
+        // document.querySelector('#demo').innerHTML = obj.name + "<br>" + obj.birth
+
+
+        // you can use the second parameter, of the JSON.parse() function, called reviver.
+        // The reviver parameter is a function that checks each property, before returning the value.
+        const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+        const obj = JSON.parse(text, function(key, value){
+            if(key == 'birth'){
+                return new Date(value)
+            }
+            else{
+                return value
+            }
+        })
+
+        document.querySelector("#demo").innerHTML = obj.name + "<br>" + obj.birth
+    </script>
+</body>
+</html>
